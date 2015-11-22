@@ -49,11 +49,11 @@ def create_app(extra_config_settings={}):
     app.jinja_env.globals['bootstrap_is_hidden_field'] = is_hidden_field_filter
 
     # Setup an error-logger to send emails to app.config.ADMINS
-    init_email_error_handler(app)
+    #init_email_error_handler(app)
 
     # Setup Flask-User to handle user account related forms
-    from app.core.models import User, MyRegisterForm
-    from app.core.views import user_profile_page
+    from app.models import User, MyRegisterForm
+    from app.views import user_profile_page
 
     db_adapter = SQLAlchemyAdapter(db, User)  # Setup the SQLAlchemy DB Adapter
     user_manager = UserManager(db_adapter, app,  # Init Flask-User and bind to app
