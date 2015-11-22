@@ -5,6 +5,7 @@
 from app import create_app
 
 app = create_app()
+app.debug = True
 
 
 # Start a development web server if executed from the command line
