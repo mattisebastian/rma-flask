@@ -1,0 +1,18 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>Welcome to microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>RMA Prototype: <a href="/">Home</a>
+      <a href="/logout/">Logout</a>
+      <a href="/login/">Login</a>
+      <a href="/register/">Register</a>
+    </div>
+    <hr>
+    {% block body %}{% endblock %}
+  </body>
+</html>
